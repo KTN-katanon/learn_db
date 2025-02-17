@@ -1,4 +1,5 @@
-import { Column, CreateDateColumn, Entity, PrimaryGeneratedColumn, UpdateDateColumn } from "typeorm";
+import { Column, CreateDateColumn, Entity, ManyToOne, PrimaryGeneratedColumn, UpdateDateColumn } from "typeorm";
+import { Order } from "./Order";
 
 @Entity()
 export class OrderItem {
@@ -22,4 +23,7 @@ export class OrderItem {
 
     @UpdateDateColumn()
     updated: Date;
+
+    @ManyToOne(() => Order, (order) => order.orderItems)
+    order: Order;
 }
