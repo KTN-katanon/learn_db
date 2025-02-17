@@ -1,4 +1,5 @@
-import { Entity, PrimaryGeneratedColumn, Column, CreateDateColumn, UpdateDateColumn } from "typeorm"
+import { Entity, PrimaryGeneratedColumn, Column, CreateDateColumn, UpdateDateColumn, ManyToMany } from "typeorm"
+import { User } from "./User"
 
 @Entity()
 export class Role {
@@ -14,4 +15,7 @@ export class Role {
 
     @UpdateDateColumn()
     updated: Date
+
+    @ManyToMany(() => User,(user) => user.roles)
+    users: User[]
 }
