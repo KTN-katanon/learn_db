@@ -44,5 +44,9 @@ AppDataSource.initialize().then(async () => {
 
     const users = await userRepository.find({ relations: { roles: true } })
     console.log(JSON.stringify(users, null, 2))
+
+
+    const roles = await rolesRepository.findOne({ relations: { users: true } })
+    console.log(JSON.stringify(roles, null, 2))
 })
     .catch(error => console.log(error))
