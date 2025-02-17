@@ -21,6 +21,8 @@
       "db:role": "ts-node src/role.ts",
       "db:type": "ts-node src/type.ts",
       "db:product": "ts-node src/product.ts",
-      "db:order": "ts-node src/order.ts"
+      "db:order": "ts-node src/order.ts",
+      "db:clear": "ts-node src/clear.ts",
+      "db:all": "npm run db:clear && npm run db:user && npm run db:role && npm run db:type && npm run db:product && npm run db:order"
    }
 }
