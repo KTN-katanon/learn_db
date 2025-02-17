@@ -1,5 +1,6 @@
-import { Entity, PrimaryGeneratedColumn, Column, CreateDateColumn, UpdateDateColumn, ManyToMany, JoinTable } from "typeorm"
+import { Entity, PrimaryGeneratedColumn, Column, CreateDateColumn, UpdateDateColumn, ManyToMany, JoinTable, OneToMany } from "typeorm"
 import { Role } from "./Role"
+import { Order } from "./Order"
 
 @Entity()
 export class User {
@@ -25,4 +26,7 @@ export class User {
     @ManyToMany(() => Role, (role) => role.users, { cascade: true })
     @JoinTable()
     roles: Role[]
+
+    @OneToMany(() => Order, (order) => order.user)
+    orders: Order[];
 }
