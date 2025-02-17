@@ -20,6 +20,7 @@
       "db:user": "ts-node src/user.ts",
       "db:role": "ts-node src/role.ts",
       "db:type": "ts-node src/type.ts",
-      "db:product": "ts-node src/product.ts"
+      "db:product": "ts-node src/product.ts",
+      "db:order": "ts-node src/order.ts"
    }
 }
