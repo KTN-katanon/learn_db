@@ -3,6 +3,7 @@ import { Role } from "./entity/Role"
 
 AppDataSource.initialize().then(async () => {
     const roleRepository = AppDataSource.getRepository(Role)
+    await roleRepository.clear()
     var role = new Role()
     role.id = 1
     role.name = "admin"
