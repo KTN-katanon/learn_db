@@ -16,6 +16,6 @@ export class Role {
     @UpdateDateColumn()
     updated: Date
 
-    @ManyToMany(() => User,(user) => user.roles)
+    @ManyToMany(() => User, (user) => user.roles)
     users: User[]
 }

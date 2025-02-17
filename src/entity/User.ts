@@ -22,7 +22,7 @@ export class User {
     @UpdateDateColumn()
     updated: Date
 
-    @ManyToMany(() => Role, (role) => role.users, {cascade: true})
+    @ManyToMany(() => Role, (role) => role.users, { cascade: true })
     @JoinTable()
     roles: Role[]
 }
