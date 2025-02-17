@@ -18,6 +18,8 @@
       "start": "ts-node src/index.ts",
       "typeorm": "typeorm-ts-node-commonjs",
       "db:user": "ts-node src/user.ts",
-      "db:role": "ts-node src/role.ts"
+      "db:role": "ts-node src/role.ts",
+      "db:type": "ts-node src/type.ts",
+      "db:product": "ts-node src/product.ts"
    }
 }
